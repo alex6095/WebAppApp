@@ -37,7 +37,8 @@ class DashboardFragment : Fragment() {
 //        }
 
         val  mWebView = binding.webview as WebView
-        mWebView.loadUrl("http://13.125.166.78:5173/card-news")
+//        mWebView.loadUrl("http://13.125.166.78:5173/card-news")
+        mWebView.loadUrl("https://www.youtube.com/")
 
         val webSettings = mWebView.getSettings()
         webSettings.setJavaScriptEnabled(true)
