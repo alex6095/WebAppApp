@@ -25,8 +25,8 @@ class NotificationsFragment : Fragment() {
     private val binding get() = _binding!!
     lateinit var mainActivity: MainActivity
 
-    private var zoomID = "9999706950"
-    private var zoompw = "3Qjzz6"
+    private var zoomID = "82050708964"
+    private var zoompw = "2F2MF0"
 
     private fun initializeSdk(context: Context) {
         val sdk = ZoomSDK.getInstance()
@@ -89,10 +89,16 @@ class NotificationsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initializeSdk(mainActivity)
+        binding.joinBtn.setEnabled(false)
+        binding.joinBtn.setVisibility(View.INVISIBLE)
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            binding.joinBtn.setEnabled(true)
+            binding.joinBtn.setVisibility(View.VISIBLE)
+            binding.spinKit.visibility = View.INVISIBLE
+        }, 4000)
         binding.joinBtn.setOnClickListener {
-            Handler(Looper.getMainLooper()).postDelayed({
                 joinMeeting(mainActivity, zoomID, zoompw)
-            }, 4000)
         }
     }
 

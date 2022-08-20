@@ -35,8 +35,8 @@ class HomeFragment : Fragment() {
 //            textView.text = it
 //        }
         val  mWebView = binding.webview as WebView
-//        mWebView.loadUrl("https://13.125.166.78:5173/home")
-        mWebView.loadUrl("https://papago.naver.com/")
+        mWebView.loadUrl("https://c3c2-117-111-13-21.jp.ngrok.io/home")
+//        mWebView.loadUrl("https://papago.naver.com/")
 
         val webSettings = mWebView.getSettings()
         webSettings.setJavaScriptEnabled(true)
